@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
 
-  get 'prices/cars/:license_plate', to: 'prices#cars'
-  get 'prices/trucks/:license_plate', to: 'prices#trucks'
+  namespace :cars do
+    get 'prices/:license_plate', controller: :prices, action: :show
+    # post 'transactions/:license_plate'
+  end
+
+  namespace :trucks do
+    get 'prices/:license_plate', controller: :prices, action: :show
+    # post 'transactions/:license_plate'
+  end
 end
