@@ -1,0 +1,18 @@
+simple:
+  type: 'Truck'
+  license_plate: '#1 COMMUTER'
+  bed_muddy: false
+  bed_down: false
+
+bed_muddy:
+  type: 'Truck'
+  license_plate: 'TUFFMUDDER'
+  bed_muddy: true
+  bed_down: false
+
+bed_down:
+  type: 'Truck'
+  license_plate: 'NOREGERTS'
+  bed_muddy: true
+  bed_down: true
+
