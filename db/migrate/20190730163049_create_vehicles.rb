@@ -5,6 +5,7 @@ class CreateVehicles < ActiveRecord::Migration[5.2]
       t.string  :type,          null: false
       t.boolean :bed_muddy
       t.boolean :bed_down
+      t.timestamps
     end
 
     add_index :vehicles, :license_plate, unique: true

@@ -1,6 +1,14 @@
 class Vehicle < ApplicationRecord
 
+  STOLEN_PLATE = '1111111'
+
+  has_many :transactions
+
   validates :license_plate, presence: true, uniqueness: true
+
+  def stolen?
+    STOLEN_PLATE == license_plate
+  end
 
   class << self
 

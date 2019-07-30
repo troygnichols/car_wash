@@ -7,8 +7,13 @@ class SeenBeforeDiscount
   end
 
   def valid?
-    # TODO
-    true
+    prev_transaction = pricing.vehicle.transactions.last
+    return false unless prev_transaction
+
+    # XXX this should really check that it was actually THIS kind of discount
+    # prev_transaction.discounts.include?('SeenBeforeDiscount')
+
+    !prev_transaction.discounted?
   end
 
   def cost
